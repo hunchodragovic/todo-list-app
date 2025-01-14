@@ -35,7 +35,15 @@ function TodoList({ todos, toggleTodo, deleteTodo, editTodo }) {
           <tbody>
             {todos.map((todo, index) => (
               <tr key={index}>
-                <td>{index + 1}</td>
+                <td
+  style={{
+    color: 'white', // Set text color to white
+    fontWeight: 'bold', // Make the text bold
+  }}
+>
+  {index + 1}
+</td>
+
                 <td>
                   {editIndex === index ? (
                     <input
